@@ -1,16 +1,16 @@
 #!/bin/bash
 BUILD_DIR=$1
-TESSERACT_OCR_VERSION=3.02.02
+TESSERACT_OCR_VERSION=3.03
 TESSERACT_OCR_DATA_VERSION=3.02
 
 TESSERACT_OCR_TGZ=tesseract-ocr-$TESSERACT_OCR_VERSION.tar.gz
-TESSERACT_OCR_REMOTE=http://www.weebly.com/uploads/1/1/5/1/11516991/$TESSERACT_OCR_TGZ
+TESSERACT_OCR_REMOTE=https://boiling-sands-16637.herokuapp.com/$TESSERACT_OCR_TGZ
 INSTALL_DIR=$BUILD_DIR/vendor/tesseract-ocr/
 INSTALL_DIR_TRAINING_DATA=$BUILD_DIR/vendor/
 TESSERACT_OCR_DIR=${HOME}/vendor/tesseract-ocr
 ENVSCRIPT=$BUILD_DIR/.profile.d/tesseract-ocr.sh
 
-TESSERACT_OCR_LANGUAGES=swe,nld,deu,nor,fra,spa,rus,fin
+TESSERACT_OCR_LANGUAGES=jpn,swe,nld,deu,nor,fra,spa,rus,fin
 
 echo "Getting Tesseract-ocr Binaries from $TESSERACT_OCR_REMOTE..."
 mkdir -p $INSTALL_DIR
