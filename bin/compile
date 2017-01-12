@@ -8,6 +8,7 @@ TESSERACT_OCR_REMOTE=https://boiling-sands-16637.herokuapp.com/$TESSERACT_OCR_TG
 INSTALL_DIR=$BUILD_DIR/vendor/tesseract-ocr/
 INSTALL_DIR_TRAINING_DATA=$BUILD_DIR/vendor/
 TESSERACT_OCR_DIR=${HOME}/vendor/tesseract-ocr
+TESSERACT_LANG_DIR=${HOME}/vendor/tessdata
 ENVSCRIPT=$BUILD_DIR/.profile.d/tesseract-ocr.sh
 
 TESSERACT_OCR_LANGUAGES=jpn,swe,nld,deu,nor,fra,spa,rus,fin
@@ -41,4 +42,4 @@ echo "Building runtime environment for tesseract-ocr"
 mkdir -p $BUILD_DIR/.profile.d
 echo "export PATH=\"$TESSERACT_OCR_DIR/bin:\$PATH\"" > $ENVSCRIPT
 echo "export LD_LIBRARY_PATH=\"$TESSERACT_OCR_DIR/lib:\$LD_LIBRARY_PATH\"" >> $ENVSCRIPT
-echo "export TESSDATA_PREFIX=\"$TESSERACT_OCR_DIR/\"" >> $ENVSCRIPT
+echo "export TESSDATA_PREFIX=\"$TESSERACT_LANG_DIR/\"" >> $ENVSCRIPT
